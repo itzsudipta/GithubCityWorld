@@ -56,6 +56,7 @@ export default function Construction({ w, d, h, sx, color, active, types, seed }
     if (blink.current) blink.current.color.setRGB(Math.sin(clock.elapsedTime * 4) > 0 ? 1.6 : 0.2, 0.05, 0.05);
   });
   const has = (t: EventType) => types.includes(t);
+  const uiCount = Math.max(3, Math.floor(w / 1.6));
 
   return (
     <group>
@@ -103,8 +104,8 @@ export default function Construction({ w, d, h, sx, color, active, types, seed }
       {has('database') && [0, 1, 2].map((i) => (
         <mesh key={i} material={steel} position={[-w / 2 + 2.2 + i * 3.4, h + 1.5, 0]} castShadow><cylinderGeometry args={[1.3, 1.3, 3, 16]} /></mesh>
       ))}
-      {has('ui') && Array.from({ length: Math.max(3, Math.floor(w / 1.6)) }, (_, i, a) => (
-        <mesh key={i} position={[-w / 2 + 0.8 + (i * (w - 1.6)) / (a.length - 1), Math.min(h, 12) * 0.5, d / 2 + 0.4]} castShadow>
+      {has('ui') && Array.from({ length: uiCount }, (_, i) => (
+        <mesh key={i} position={[-w / 2 + 0.8 + (i * (w - 1.6)) / (uiCount - 1), Math.min(h, 12) * 0.5, d / 2 + 0.4]} castShadow>
           <boxGeometry args={[0.22, Math.min(h, 12) * 0.9, 0.5]} /><meshStandardMaterial color={color} roughness={0.4} metalness={0.3} />
         </mesh>
       ))}
