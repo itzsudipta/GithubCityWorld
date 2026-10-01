@@ -12,6 +12,13 @@ explored without connecting an account.
 > developer's curiosity. Please do not take it too seriously—just have fun and
 > track your code and try to mess with the AI. This is not a vibe-coded project.
 
+## Project Pictures
+
+<p align="center">
+  <img src="./public/ss.png" alt="GitHub World" width="900"/>
+</p>
+
+
 ## Features
 
 - Loads repositories owned by the authenticated GitHub user.
@@ -37,14 +44,6 @@ can be reviewed. After your issue has been reviewed, you can open a pull
 request with the implementation and a short description of what you changed.
 All creative additions are welcome as long as they keep the project fun and
 usable.
-
-## Project pictures
-
-Screenshots and pictures of the project are welcome in the README so visitors
-can understand GitHub World and see the 3D city before running it. If you add
-or update a picture, please use a clear image that shows the project in action
-and place it near the relevant description.
-
 
 
 ## Requirements
